@@ -144,3 +144,53 @@ summary(x)
 x <- c(1,2,4,8)
 summary(x)
 
+object.size(iris)
+
+
+
+##########################
+#복습 시작
+
+# .xlsx 파일을 읽는 read_excel()을 실행하려면 readxl을 설치한 후 실행해야 한다.
+install.packages('readxl')
+library(readxl)
+
+y <- read_excel('reservation_r_excel.xlsx')
+head(y)
+
+# .csv를 읽는 read.csv는 그냥 실행해도 잘 된다.
+x <- read.csv('reservation_r_csv.csv')
+head(x)
+
+# 데이터명.Rdata : R 전용 데이터
+
+ls(x)
+ls(y)
+
+z <- read_excel('reservation_r.xlsx')
+z
+
+rm(list=ls())
+ls()
+
+head(women)
+View(women)
+is.null(women)
+is.numeric(women)
+is.logical(women)
+is.data.frame(women)
+summary(women)
+dim(women)
+object.size(women)
+
+
+x <- c(1,2,3,4,5,6,7,8,NA,10)
+is.na(x)
+is.null(x)
+is.logical(x)
+is.factor(x)
+is.data.frame(x)
+is.vector(x)
+
+#여기까지는 rclass4.r 복습
+##########################
